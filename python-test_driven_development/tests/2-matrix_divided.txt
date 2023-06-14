@@ -56,5 +56,12 @@ This is test for the matrix_divided function. First import
     ...
     TypeError: matrix must be a matrix (list of lists) of integers/floats
 
-    >>> matrix_divided([[], []], 2)
-    [[], []]
+    >>> matrix_divided([[float("hola")], []], 2)
+    Traceback (most recent call last):
+    ...
+    ValueError: could not convert string to float: 'hola'
+
+    >>> matrix_divided([[Float("hola")], []], 2)
+    Traceback (most recent call last):
+    ...
+    NameError: name 'Float' is not defined
