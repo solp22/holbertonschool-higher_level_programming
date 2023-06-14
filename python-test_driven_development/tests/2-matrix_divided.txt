@@ -46,7 +46,15 @@ This is test for the matrix_divided function. First import
     >>> matrix_divided([[1, 2, 3], [4, 5, 6]], float('NaN'))
     [[nan, nan, nan], [nan, nan, nan]]
 
-    >>> matrix_divided(None, 2)
+    >>> matrix_divided('e', 2)
     Traceback (most recent call last):
     ...
     TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+    >>> matrix_divided(["ch", ["ch"]], 2)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+    >>> matrix_divided([[], []], 2)
+    [[], []]
