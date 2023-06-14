@@ -8,7 +8,6 @@ This is test for the matrix_divided function. First import
 ``matrix_divided`` from the ``2-matrix_divided`` module:
 
     >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
-Now use it:
 
     >>> matrix_divided([[1, 2, 3], [4, 5, 6]], 2)
     [[0.5, 1.0, 1.5], [2.0, 2.5, 3.0]]
