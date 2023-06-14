@@ -51,7 +51,7 @@ This is test for the matrix_divided function. First import
     ...
     TypeError: matrix must be a matrix (list of lists) of integers/floats
 
-    >>> matrix_divided([1, 2, 'a'], 2)
+    >>> matrix_divided([[1, 2, 3], ['a', 4, 5]], 2)
     Traceback (most recent call last):
     ...
     TypeError: matrix must be a matrix (list of lists) of integers/floats
