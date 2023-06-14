@@ -61,11 +61,6 @@ This is test for the matrix_divided function. First import
     ...
     ValueError: could not convert string to float: 'hola'
 
-    >>> NameError: name 'Float' is not defined
-    Traceback (most recent call last):
-    ...
-    NameError: name 'Float' is not defined
-
     >>> matrix_divided(None, 2)
     Traceback (most recent call last):
     ...
