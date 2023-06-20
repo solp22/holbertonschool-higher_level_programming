@@ -12,24 +12,27 @@ This is test for the integer_validator function. First import
 Now use it:
 
     >>> bg = BaseGeometry()
-
     >>> bg.integer_validator("age", 42)
 
+    >>> bg = BaseGeometry()
     >>> bg.integer_validator("name", "John")
     Traceback (most recent call last):
     ...
     TypeError: name must be an integer
 
+    >>> bg = BaseGeometry()
     >>> bg.integer_validator("age", 0)
     Traceback (most recent call last):
     ...
     ValueError: age must be greater than 0
 
+    >>> bg = BaseGeometry()
     >>> bg.integer_validator("distance", -4)
     Traceback (most recent call last):
     ...
     ValueError: age must be greater than 0
 
+    >>> bg = BaseGeometry()
     >>> bg.integer_validator()
     Traceback (most recent call last):
     ...
