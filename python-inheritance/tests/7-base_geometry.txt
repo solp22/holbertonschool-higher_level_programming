@@ -4,9 +4,6 @@ The ``7-base_geometry`` module
 Using ``integer_validator``
 -------------------
 
-This is test for the integer_validator function. First import
-``integer_validator`` from the ``17-base_geometry`` module:
-
     >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 Now use it:
