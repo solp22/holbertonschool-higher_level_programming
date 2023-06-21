@@ -12,6 +12,6 @@ class Square(Rectangle):
         Rectangle.__init__(self, size, size)
         self.__width = size
         self.__height = size
-    
+
     def area(self):
         return self.__width * self.__height
