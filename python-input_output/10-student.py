@@ -12,8 +12,8 @@ class Student:
         if isinstance(self, Student):
             if attrs is None:
                 return self.__dict__
-        dict={}
+        dict = {}
         for element in attrs:
             if element in self.__dict__.keys():
                 dict[element] = self.__dict__[element]
-        return dict 
+        return dict
