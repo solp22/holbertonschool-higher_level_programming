@@ -17,7 +17,9 @@ class Student:
             if element in self.__dict__.keys():
                 dict[element] = self.__dict__[element]
         return dict
+
     def reload_from_json(self, json):
-        self.first_name = json.get("first_name")
-        self.last_name = json.get("last_name")
-        self.age = json.get("age")
+        if json:
+            self.first_name = json.get("first_name")
+            self.last_name = json.get("last_name")
+            self.age = json.get("age")
