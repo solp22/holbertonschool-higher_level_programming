@@ -14,4 +14,6 @@ def pascal_triangle(n):
             else:
                 new.append(triangle[tri][lst - 1] + triangle[tri][lst])
         triangle.append(new)
+    if n <= 0:
+        return [[]]
     return triangle
