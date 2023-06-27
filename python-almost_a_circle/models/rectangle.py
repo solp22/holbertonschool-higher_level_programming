@@ -69,12 +69,9 @@ class Rectangle(Base):
 
     def display(self):
         """print rectangle"""
-        if self.width == 0 or self.height == 0:
-            return ""
-        for i in range(self.height - 1):
-            print("#" * self.width)
-        print("#" * self.width)
-        return ""
+        print("\n" * self.__y, end="")
+        for i in range(self.__height):
+            print(" " * self.__x + "#" * self.__width)
 
     def __str__(self):
         return (f"[Rectangle] ({self.id}) "
