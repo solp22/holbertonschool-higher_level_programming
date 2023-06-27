@@ -72,6 +72,6 @@ class Rectangle(Base):
         if self.width == 0 or self.height == 0:
             return ""
         for i in range(self.height - 1):
-            print("{}".format(self.print_symbol) * self.width)
-        print("{}".format(self.print_symbol) * self.width, end="")
+            print("#" * self.width)
+        print("#" * self.width)
         return ""
