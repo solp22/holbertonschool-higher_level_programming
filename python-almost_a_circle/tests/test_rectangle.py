@@ -65,39 +65,23 @@ class TestRectangle(unittest.TestCase):
         r1 = Rectangle(4, 6, 2, 1, 12)
         self.assertEqual(r1.__str__(), '[Rectangle] (12) 2/1 - 4/6')
 
-        r2 = Rectangle(5, 5, 1)
-        self.assertEqual(r2.__str__(), '[Rectangle] (1) 1/0 - 5/5')
+    def test_update_args(self):
+        """check the method update with *args"""
+        r6 = Rectangle(10, 2, 3, 4, 12)
+        r6.update(2)
+        self.assertEqual(r6.__str__(), "[Rectangle] (2) 3/4 - 10/2")
+        r6.update(2, 15)
+        self.assertEqual(r6.__str__(), "[Rectangle] (2) 3/4 - 15/2")
 
-    def test_update(self):
-        """check update w args and kwargs"""
-        r1 = Rectangle(10, 10, 10, 10)
-        r1.update(89)
-        self.assertEqual(r1.__str__(), '[Rectangle] (89) 10/10 - 10/10')
-
-        r1.update(89, 2)
-        self.assertEqual(r1.__str__(), '[Rectangle] (89) 10/10 - 2/10')
-
-        r1.update(89, 2, 3)
-        self.assertEqual(r1.__str__(), '[Rectangle] (89) 10/10 - 2/3')
-
-        r1.update(89, 2, 3, 4)
-        self.assertEqual(r1.__str__(), '[Rectangle] (89) 4/10 - 2/3')
-
-        r1.update(89, 2, 3, 4, 5)
-        self.assertEqual(r1.__str__(), '[Rectangle] (89) 4/5 - 2/3')
-
-        r1 = Rectangle(10, 10, 10, 10)
-        r1.update(height=1)
-        self.assertEqual(r1.__str__(), '[Rectangle] (1) 10/10 - 10/10')
-
-        r1.update(width=1, x=2)
-        self.assertEqual(r1.__str__(), '[Rectangle] (1) 2/10 - 1/1')
-
-        r1.update(y=1, width=2, x=3, id=89)
-        self.assertEqual(r1.__str__(), '[Rectangle] (89) 3/1 - 2/1')
-
-        r1.update(x=1, height=2, y=3, width=4)
-        self.assertEqual(r1.__str__(), '[Rectangle] (89) 1/3 - 4/2')
+    def test_update_kwargs(self):
+        """check the method update with kwargs"""
+        r7 = Rectangle(10, 2, 3, 4, 12)
+        r7.update(height=9)
+        self.assertEqual(r7.__str__(), "[Rectangle] (12) 3/4 - 10/9")
+        r7.update(width=5, x=8)
+        self.assertEqual(r7.__str__(), "[Rectangle] (12) 8/4 - 5/9")
+        r7.update(y=11, width=22, x=33, id=89)
+        self.assertEqual(r7.__str__(), "[Rectangle] (89) 33/11 - 22/9")
 
     def test_to_dictionary(self):
         """check dictionary"""
