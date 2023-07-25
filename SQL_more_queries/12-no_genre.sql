@@ -1,4 +1,3 @@
--- list all shows without a genre linked
 -- list all shows w or wo genre linked
 SELECT tv_shows.title, tv_show_genres.genre_id
 FROM tv_shows
