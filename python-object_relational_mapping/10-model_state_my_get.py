@@ -14,7 +14,8 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    instance = session.query(State).order_by(State.id).filter(State.name == sys.argv[4]).first()
+    instance = session.query(State).order_by(
+        State.id).filter(State.name == sys.argv[4]).first()
     if not instance:
         print("Not found")
     print(instance.id)
