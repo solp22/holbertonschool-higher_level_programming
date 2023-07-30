@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""takes an arg and displays all values in table where name matches, safe from injections"""
+"""takes an arg and displays all values in table
+ where name matches, safe from injections"""
 
 
 if __name__ == "__main__":
@@ -20,7 +21,7 @@ if __name__ == "__main__":
     )
     cur = db.cursor()
     cur.execute(
-        "SELECT * FROM states WHERE name LIKE BINARY '{}' ORDER BY id ASC",
+        "SELECT * FROM states WHERE name LIKE BINARY %s ORDER BY id ASC",
         (state_name_searched,))
     rows = cur.fetchall()
     for result in rows:
