@@ -7,6 +7,7 @@ from model_state import Base, State
 
 Base = declarative_base()
 
+
 class City(Base):
     """city class"""
     __tablename__ = 'cities'
